@@ -1,14 +1,16 @@
 body
 {
-    background-image: url("studio.png");
-    color: rgb(230, 230, 230);
+    background-color: rgb(36, 39, 38);
+    background-image: url(".png");
+    color: rgb(202, 202, 202);
     font-family: "Georgia", sans-serif;
     text-align: right;
+    
 }
 
 div
 {
-    font-size: 30px;
+    font-size: 20px;
     padding-right: 20px;
 }
 
@@ -24,6 +26,8 @@ nav a
     display: inline-block;
     text-decoration: none;
     float: right;
+    color: aliceblue;
+    font-size: 30px;
 }
 .intro
 {
@@ -38,7 +42,7 @@ header
 
 footer
 {
-    text-align: left;
-    padding-top: 500px;
-    font-size: 20px
+    text-align: center;
+    padding-top: 670px;
+    font-size: 17px
 }
