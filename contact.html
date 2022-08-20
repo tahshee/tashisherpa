@@ -18,6 +18,37 @@
         <p> This is me messing with webpages.</p>
         <p>This is Contact. Just for you to call me.</p>
     </div>
+    <div class="container">
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>contact me</h3>
+        <input type=""text" id="name" placeholder="Your Name" required>
+        <input type=""email" id="email" placeholder="Email id" required>
+        <input type=""text" id="phone" placeholder="Phone no" required>
+        <textarea id="message" rows="4" placeholder="Please tell us your issue."></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com:2525",
+                Username : "tahsheee@gmail.com",
+                Password : "F8788A8BBFDF709C4E4453E4B568544D12F0",
+                To : 'tahsheee@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "This is the subject",
+                Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+
+
+            }).then(
+            message => alert("Message Sent Successfully")
+);
+        }
+    </script>
 </body>
 <footer>&copy; Tahshee 2022</footer>
 </html>    
